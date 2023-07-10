@@ -26,14 +26,14 @@ const Index = ({teams, migrationProcess, projects}) => {
                         { teams?.length > 0 &&
                         teams?.map((node) => (
                             <div key={node.id} className="col-sm-6 col-lg-4">
-                                <Link href={'team/'+node.id} className="mil-team-card mil-mb-60">
+                                <div className="mil-team-card mil-mb-60">
                                     <div className="mil-image-frame mil-mb-30">
                                         <img src={`${process.env.NEXT_PUBLIC_DRUPAL_BASE_URL}${node.field_image.uri.url}`} alt="Team member" />
                                         <div className="mil-team-circle" />
                                     </div>
                                     <h4 className="mil-mb-10">{node.field_name}</h4>
                                     <p>{node.title}</p>
-                                </Link>
+                                </div>
                             </div>
                         ))
                         }
